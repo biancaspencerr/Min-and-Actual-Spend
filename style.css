@@ -12,6 +12,15 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto; /* Centers horizontally if body flex is removed */
+}
+
 .table-form {
   width: 50%;
 }
@@ -49,6 +58,7 @@ input::placeholder {
 .submit-section {
   text-align: center;
   margin-top: 20px;
+  width: 100%;
 }
 
 .submit-section button {
@@ -69,4 +79,47 @@ input::placeholder {
 
 .submit-section button:active {
   background-color: #ffd900e1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%; /* Expands to 90% width on smaller screens */
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .submit-section button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .submit-section button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
